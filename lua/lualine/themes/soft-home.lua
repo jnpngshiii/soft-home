@@ -1,4 +1,4 @@
-local p = require("rose-pine.palette")
+local p = require("soft-home.palette")
 
 return {
 	normal = {

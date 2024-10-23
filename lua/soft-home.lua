@@ -1,9 +1,9 @@
 local M = {}
-local config = require("rose-pine.config")
+local config = require("soft-home.config")
 
 local function set_highlights()
-	local utilities = require("rose-pine.utilities")
-	local palette = require("rose-pine.palette")
+	local utilities = require("soft-home.utilities")
+	local palette = require("soft-home.palette")
 	local styles = config.options.styles
 
 	local groups = {}
@@ -1094,12 +1094,12 @@ local function set_highlights()
 
 		-- Support StatusLineTerm & StatusLineTermNC from vim
 		vim.cmd([[
-		augroup rose-pine
+		augroup soft-home
 			autocmd!
 			autocmd TermOpen * if &buftype=='terminal'
 				\|setlocal winhighlight=StatusLine:StatusLineTerm,StatusLineNC:StatusLineTermNC
 				\|else|setlocal winhighlight=|endif
-			autocmd ColorSchemePre * autocmd! rose-pine
+			autocmd ColorSchemePre * autocmd! soft-home
 		augroup END
 		]])
 	end
@@ -1114,7 +1114,7 @@ function M.colorscheme(variant)
 		vim.cmd("hi clear")
 		vim.cmd("syntax reset")
 	end
-	vim.g.colors_name = "rose-pine"
+	vim.g.colors_name = "soft-home"
 
 	set_highlights()
 end

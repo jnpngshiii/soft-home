@@ -1,4 +1,4 @@
-local options = require("rose-pine.config").options
+local options = require("soft-home.config").options
 local variants = {
 	main = {
 		_nc = "#898a8b",
